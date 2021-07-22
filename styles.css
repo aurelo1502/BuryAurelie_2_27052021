@@ -415,6 +415,10 @@ object-fit: cover;
     width: 270px;
     height: 350px;
   }
+
+  .grandeImg {
+      height: 450px;
+}
   
   .grand_cadre img {
     width: 270px;
