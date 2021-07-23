@@ -387,73 +387,73 @@ object-fit: cover;
 /*--------Activités--------*/
 
 .activites {
-    display: flex;
-    justify-content: space-around;
-    height: 450px;
-    align-content: space-between;
-  }
-
-  .pomegues_frioul,
-  .garde_longchamp {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 23%;
-  }
-
-  .vieux_port, .calanques{
-      width: auto;
-  }
- 
-  .activites img {
-    border-radius: 15px 15px 0 0;
-    object-fit: cover;
-    width: 100%;
-  }
-  
-  .grandeImg img{
-    width: 270px;
-    height: 350px;
-  }
-
-  .grandeImg {
-      height: 450px;
+  display: flex;
+  justify-content: space-around;
+  height: 450px;
+  align-content: space-between;
 }
-  
-  .grand_cadre img {
-    width: 270px;
-    height: 160px;
-  }
-  
-  .moyen_cadre img {
-    width: 270px;
-    height: 140px;
-  }
-  
-  .petit_cadre img {
-    width: 270px;
-    height: 120px;
-  }
-  
-  .grande_photo,
-  .grand_cadre,
-  .moyen_cadre,
-  .petit_cadre,
-  .vieux_port,
-  .calanques {
-    border: 1px solid #f2f2f2;
-    border-radius: 15px;
-    box-shadow: 5px 5px 10px #f2f2f2;
-  }
-  
-  .activites h4 {
-    margin-left: 15px;
-  }
 
-  .activites a div:hover{
-    box-shadow: 5px 5px 5px #deebff;
-  }
+.pomegues_frioul,
+.garde_longchamp {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 23%;
+}
 
+.vieux_port, .calanques{
+    width: 23%;
+    height: auto;
+}
+
+.activites img {
+  border-radius: 15px 15px 0 0;
+  object-fit: cover;
+  width: 100%;
+}
+
+.grandeImg img{
+  width: 270px;
+  height: 350px;
+}
+
+.grandeImg{
+  height: 450px;
+}
+
+.grand_cadre img {
+  width: 270px;
+  height: 160px;
+}
+
+.moyen_cadre img {
+  width: 270px;
+  height: 140px;
+}
+
+.petit_cadre img {
+  width: 270px;
+  height: 120px;
+}
+
+.grande_photo,
+.grand_cadre,
+.moyen_cadre,
+.petit_cadre,
+.vieux_port,
+.calanques {
+  border: 1px solid #f2f2f2;
+  border-radius: 15px;
+  box-shadow: 5px 5px 10px #f2f2f2;
+}
+
+.activites h4 {
+  margin-left: 15px;
+}
+
+.activites a div:hover{
+  box-shadow: 5px 5px 5px #deebff;
+}
   
 
 
@@ -497,49 +497,70 @@ footer {
 }
 
 @media (max-width: 1199px) {
-    body {
-      width: 97%;
-      margin: auto;
-    }
-  
-    #Hebergements {
-      width: 55%;
-    }
-  
-    aside {
-      width: 35%;
-      height: 520px;
-    }
-  
-    .activites {
-      flex-wrap: wrap;
-      justify-content: space-around;
-      height: 450px; 
-      align-content: space-between; 
-    }
-  
-    .pomegues_frioul,
-    .garde_longchamp {
-      flex-direction: row;
-      width: 65%;
-      justify-content: space-between;
-    }
-  
-    .activites img {
-      width: 30vw; 
-      height: 150px;
-    }
-  
-    footer {
-      margin: 20px 0 0 0; 
-    }
-  
-    .hebergements,
-    .assistance {
-      margin-left: auto;
-      margin-right: auto;
-    }
+  body {
+    width: 97%;
+    margin: auto;
   }
+
+  #Hebergements {
+    width: 55%;
+  }
+
+  aside {
+    width: 35%;
+    height: 520px;
+  }
+
+  .activites {
+    flex-wrap: wrap;
+    justify-content: space-around;
+    height: 500px;
+    align-content: space-between;
+  }
+
+  .pomegues_frioul,
+  .garde_longchamp {
+    flex-direction: row;
+    width: 65%;
+    height:145px;
+    justify-content: space-around;
+  }
+
+  .activites img{
+    height: 150px;
+  }
+
+
+  .vieux_port
+ {
+  height: 227px;
+  width:auto;
+  }
+
+  .calanques{
+    height:215px;
+    width:auto;
+  }
+  
+
+  .petit_cadre,
+  .grand_cadre
+  {
+    height: 227px;
+  }
+ 
+
+
+  footer {
+    margin: 20px 0 0 0; 
+  }
+
+  .hebergements,
+  .assistance {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
   
   /*----- Écran max 991px -----*/
   
@@ -578,15 +599,23 @@ footer {
     }
   }
   
-  /*----- Écran max 767px -----*/
+  /*----- Écran max 799px -----*/
   
-  @media (max-width: 767px) {
+  @media (max-width: 799px) {
     aside {
       order: 1; 
     }
   
     #Hebergements {
       order: 2; 
+    }
+
+    #activites{
+      order: 3;
+    }
+
+    footer{
+      order:4;
     }
   
     .activites {
@@ -601,6 +630,7 @@ footer {
     .garde_longchamp {
       flex-direction: column; 
       width: auto; 
+      height:auto;
     }
   
     .activites img {
@@ -608,7 +638,7 @@ footer {
       height: 150px;
     }
   
-    .grande_photo,
+    .grandeImg,
     .grand_cadre,
     .petit_cadre,
     .moyen_cadre {
@@ -711,5 +741,4 @@ footer {
       border-radius: 0 10px 10px 0;
     }
   }
-  
   
