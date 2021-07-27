@@ -45,8 +45,6 @@ body {
 }
 
 .fa, .fab, .fad, .fal, .far, .fas {
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
     display: inline-block;
     font-style: normal;
     font-variant: normal;
@@ -103,7 +101,6 @@ body {
   }
   
   #localisation {
-    border: 1px solid #f2f2f2;
     background-color: #f2f2f2;
     border-radius: 10px 0 0 10px;
     padding: 10px;
@@ -117,7 +114,6 @@ body {
   #research {
     background-color: #0065fc;
     color: white;
-    border: 1px solid #0065fc;
     border-radius: 0 10px 10px 0;
   }
   
@@ -128,7 +124,6 @@ body {
   #loupe {
     background-color: #0065fc;
     color: white;
-    border: 1px solid #0065fc;
     padding: 0 10px 0 10px;
     border-radius: 10px;
     display: none;
@@ -162,7 +157,6 @@ body {
   
   .icones i {
     color: #0065fc;
-    border: 1px solid #deebff;
     background-color: #deebff;
     border-radius: 100px;
     width: 40px;
@@ -248,10 +242,6 @@ div{
 h2{
     font-size: 1.5em;
     display: block;
-    margin-block-start: 0.83em;
-    margin-block-end: 0.83em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
     font-weight: bold;
 }
 
@@ -272,19 +262,11 @@ a{
 h3{
     display: block;
     font-size: 1.17em;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
     font-weight: bold;
 }
 
 h4{
     display: block;
-    margin-block-start: 1.33em;
-    margin-block-end: 1.33em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
     font-weight: bold;
     margin-left:20px;
 }
@@ -295,10 +277,6 @@ h4{
 
 p{
     display: block;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
 } 
 
 .fa, .fas{
@@ -330,7 +308,6 @@ aside{
  
 aside{
     margin-top: 30px;
-    border: 1px solid #f2f2f2;
     background-color: #f2f2f2;
     border-radius: 15px;
     width: 30%;
@@ -356,7 +333,6 @@ object-fit: cover;
 
 .photo_populaire{
     display: flex;
-    border: 1px solid white;
     background-color: white;
     border-radius: 15px;
     padding: 2px 10px 2px 2px;
@@ -489,12 +465,12 @@ footer {
 
 /*----- Écran max 1199px -----*/
 
-@media screen (min-width : 1200px){
-    .activites{
+@media screen (min-width: 1200px) {
+    .activites {
         width: 10%;
     }
-    
-}
+  }
+
 
 @media (max-width: 1199px) {
   body {
@@ -514,14 +490,14 @@ footer {
   .activites {
     flex-wrap: wrap;
     justify-content: space-around;
-    height: 500px;
-    align-content: space-between;
+    height: 500px; /*augmentation de la hauteur pour éviter que les éléments soient collés verticalement*/
+    align-content: space-between; /*Les espace un peu plus*/
   }
 
   .pomegues_frioul,
   .garde_longchamp {
     flex-direction: row;
-    width: 65%;
+    width: 65%; /*augmentation de la largeur pour éviter que les éléments soient collés horizontalement*/
     height:145px;
     justify-content: space-around;
   }
@@ -552,12 +528,12 @@ footer {
 
 
   footer {
-    margin: 20px 0 0 0; 
+    margin: 20px 0 0 0; /*plus d'espace en haut et moins de débordement sur les côtés*/
   }
 
   .hebergements,
   .assistance {
-    margin-left: auto;
+    margin-left: auto; /*recentre les éléments*/
     margin-right: auto;
   }
 }
@@ -566,7 +542,7 @@ footer {
   
   @media (max-width: 991px) {
     .filtres {
-      flex-direction: column; 
+      flex-direction: column; /*aligne filtres verticalement*/
       align-items: flex-start;
     }
   
@@ -575,27 +551,27 @@ footer {
     }
   
     .icones {
-      margin-bottom: 10px; 
+      margin-bottom: 10px; /*espace filtres verticalement*/
     }
   
     main {
-      flex-direction: column; 
+      flex-direction: column; /*section hebergement et aside s'alignent verticalement*/
     }
   
     #Hebergements,
     aside {
-      width: 90%; 
+      width: 90%; /*section hebergement et aside occupent 90% de l'écran, marge auto pour centrer, augmente espace en bas*/
       margin: auto;
       margin-bottom: 15px;
     }
   
     .bloctexte img {
-      width: 40vw; 
+      width: 40vw; /*images hebergement occupent 40% de la largeur*/
       height: 150px;
     }
   
     .photo_populaire h4 br {
-      display: none; 
+      display: none; /*supprime renvoi à la ligne*/
     }
   }
   
@@ -603,7 +579,7 @@ footer {
   
   @media (max-width: 799px) {
     aside {
-      order: 1; 
+      order: 1; /*aside avant hebergement*/
     }
   
     #Hebergements {
@@ -619,22 +595,22 @@ footer {
     }
   
     .activites {
-      flex-wrap: nowrap; 
-      flex-direction: column; 
-      height: auto; 
+      flex-wrap: nowrap; /*annule renvoi à la ligne*/
+      flex-direction: column; /*aligne verticalement*/
+      height: auto; /*hauteur auto pour les repartir verticalement*/
       width: 97%;
       margin: auto;
     }
   
     .pomegues_frioul,
     .garde_longchamp {
-      flex-direction: column; 
-      width: auto; 
+      flex-direction: column; /*aligne verticalement*/
+      width: auto; /*même taille que activités*/
       height:auto;
     }
   
     .activites img {
-      width: 100%; 
+      width: 100%; /*images occupent 100% de la largeur*/
       height: 150px;
     }
   
@@ -651,7 +627,7 @@ footer {
   
     .hebergements,
     .assistance {
-      margin-left: 50px; 
+      margin-left: 50px; /*même marge que propos pour les aligner*/
     }
   }
   
@@ -659,55 +635,54 @@ footer {
   
   @media (max-width: 575px) {
     .nav_menu {
-      flex-direction: column-reverse; 
-      align-items: flex-end; 
+      flex-direction: column-reverse; /*inverse inscription et hébergement et activités*/
+      align-items: flex-end; /*placés à droite*/
       width: 100%;
     }
   
     .header {
-      align-items: stretch; 
+      align-items: stretch; /*remonte logo en haut à gauche*/
     }
   
     .logo {
-      position: absolute; 
+      position: absolute; /*contrôle largeur des 2 div*/
     }
   
     .header nav {
-      width: 100%; 
+      width: 100%; /*étend largeur hébergement et activités sur tout l'écran*/
     }
   
     .header nav ul {
-      padding-left: 0; 
+      padding-left: 0; /*enlève le padding à gauche*/
     }
   
     .nav_menu li {
       border-bottom: 2px solid #f2f2f2;
-      padding-bottom: 17px; 
+      padding-bottom: 17px; /*bordure grise et alignement hebergement et activités*/
       width: 50%;
       text-align: center;
     }
   
     .nav_menu li:hover {
-      border-bottom-color: #0065fc; 
+      border-bottom-color: #0065fc; /*bordure bleue basse au clic*/
     }
   
     .nav:hover {
-      border-top: none; 
+      border-top: none; /*enlever bordure bleue au clic*/
     }
   
     .hebergement img {
-      width: 90vw;
+      width: 90vw; /*image occupe 90% de section*/
       height: 140px;
     }
   
     #Hebergements {
-      border: 1px solid white;
       background-color: white; 
     }
   
     .bloctexte {
       border: 1px solid #f2f2f2;
-      box-shadow: 0 0 15px #f2f2f2; 
+      box-shadow: 0 0 15px #f2f2f2; /*bordure autour*/
     }
   
     .bloc_populaire .intitulé {
@@ -724,11 +699,11 @@ footer {
     
   
     #research {
-      display: none; 
+      display: none; /*supprime bouton rechercher*/
     }
   
     #loupe {
-      display: block; 
+      display: block; /*fait apparaitre le bouton loupe*/
     }
   
     #ville {
